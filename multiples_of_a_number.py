@@ -6,7 +6,7 @@ __author__ = 'jonathan'
 import sys
 test_cases = open(sys.argv[1], 'r')
 for test in test_cases:
-    test = test.strip().split(' ')
+    test = test.strip().split(',')
     x = int(test[0])
     n = int(test[1])
     count = 2
@@ -15,5 +15,6 @@ for test in test_cases:
         if result >= x:
             print result
             break
+        count += 1
 
 test_cases.close()
